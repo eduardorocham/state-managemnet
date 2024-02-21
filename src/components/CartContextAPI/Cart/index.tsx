@@ -10,7 +10,7 @@ export const Cart = () => {
       <Title text="Itens no carrinho:" />
       <ul>
         {cartItems.map((item) => (
-          <li>
+          <li className="mb-2">
             {item.name}{" "}
             <ButtonRemove itemId={item.id} removeFunction={removeFromCart} />
           </li>
