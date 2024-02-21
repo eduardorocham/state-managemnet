@@ -11,7 +11,7 @@ export const Cart = () => {
       <ul>
         {cartItems.map((item) => (
           <li>
-            {item.nome}{" "}
+            {item.name}{" "}
             <ButtonRemove itemId={item.id} removeFunction={removeFromCart} />
           </li>
         ))}

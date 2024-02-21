@@ -1,9 +1,9 @@
 import { useCart } from "../../contexts/cartContext";
 import { ButtonAdd } from "../ButtonAdd";
-import { Item } from "../../types/Item";
+import { ProductType } from "../../types/Product";
 
 interface ProductProps {
-  product: ProductProps;
+  product: ProductType;
 }
 
 export const Product = ({ product }: ProductProps) => {
@@ -11,7 +11,12 @@ export const Product = ({ product }: ProductProps) => {
 
   return (
     <li className="mb-2">
-      {/* {product.product} <ButtonAdd addToCart={addToCart} product={product} /> */}
+      {product.name}{" "}
+      <ButtonAdd
+        addFunction={addToCart}
+        product={product}
+        text="Adicionar ao carrinho"
+      />
     </li>
   );
 };

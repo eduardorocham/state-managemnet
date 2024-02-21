@@ -1,9 +1,9 @@
 import { text } from "stream/consumers";
-import { ProductProps } from "../../types/Product";
+import { ProductType } from "../../types/Product";
 
 interface ButtonProps {
-  product: ProductProps;
-  addFunction: (item: ProductProps) => void;
+  product: ProductType;
+  addFunction: (item: ProductType) => void;
   text: string;
 }
 

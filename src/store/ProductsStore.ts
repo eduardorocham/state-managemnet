@@ -1,14 +1,14 @@
 import { create } from "zustand";
-import { ProductProps } from "../types/Product";
+import { ProductType } from "../types/Product";
 
 interface ActionProps {
-  addProduct: (product: ProductProps) => void;
+  addProduct: (product: ProductType) => void;
   removeProduct: (productId: number) => void;
 }
 
 interface StoreProps {
   state: {
-    products: ProductProps[];
+    products: ProductType[];
   };
   actions: ActionProps;
 }

@@ -1,14 +1,14 @@
 import { create } from "zustand";
-import { ProductProps } from "../types/Product";
+import { ProductType } from "../types/Product";
 
 interface ActionProps {
-  addToCart: (item: ProductProps) => void;
+  addToCart: (item: ProductType) => void;
   removeFromCart: (id: number) => void;
 }
 
 interface CartStore {
   state: {
-    cart: ProductProps[];
+    cart: ProductType[];
   };
   actions: ActionProps;
 }

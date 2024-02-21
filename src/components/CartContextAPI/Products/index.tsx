@@ -9,9 +9,9 @@ export const Products = () => {
     <div>
       <Title text="Produtos Disponíveis:" />
       <ul>
-        {/* {availableProducts.map((product) => (
+        {availableProducts.map((product) => (
           <Product product={product} key={product.id} />
-        ))} */}
+        ))}
       </ul>
     </div>
   );

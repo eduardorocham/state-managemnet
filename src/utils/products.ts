@@ -1,22 +1,18 @@
 export const products = [
   {
     id: 1,
-    nome: "Camiseta",
-    preco: 29.99,
+    name: "Camiseta",
   },
   {
     id: 2,
-    nome: "Calça Jeans",
-    preco: 49.99,
+    name: "Calça Jeans",
   },
   {
     id: 3,
-    nome: "Tênis Esportivo",
-    preco: 79.99,
+    name: "Tênis Esportivo",
   },
   {
     id: 4,
-    nome: "Bolsa",
-    preco: 39.99,
+    name: "Bolsa",
   },
 ];
