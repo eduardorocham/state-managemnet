@@ -5,7 +5,7 @@ import { Products } from "./Products";
 export const CartContextAPI = () => {
   return (
     <CartProvider>
-      <div>
+      <div className="flex flex-col items-center ">
         <Cart />
         <Products />
       </div>

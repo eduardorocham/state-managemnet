@@ -1,19 +1,21 @@
 import { useCartStore } from "../../../store/CartStore";
+import { Title } from "../../Title";
+import { ButtonRemove } from "../../ButtonRemove";
 
 export const Cart = () => {
-  const [cartItems, removeFromCart] = useCartStore((state) => [
-    state.cart,
-    state.removeFromCart,
-  ]);
+  const {
+    state: { cart },
+    actions: { removeFromCart },
+  } = useCartStore();
 
   return (
     <div>
-      <h1>Itens no carrinho:</h1>
+      <Title text="Itens no carrinho:" />
       <ul>
-        {cartItems.map((item) => (
-          <li>
-            {item.nome}{" "}
-            <button onClick={() => removeFromCart(item.id)}>Remover</button>
+        {cart.map((item) => (
+          <li className="mb-2">
+            {item.name}{" "}
+            <ButtonRemove itemId={item.id} removeFunction={removeFromCart} />
           </li>
         ))}
       </ul>

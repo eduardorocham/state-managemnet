@@ -3,7 +3,7 @@ import { Products } from "./Products";
 
 export const CartZustand = () => {
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <Cart />
       <Products />
     </div>

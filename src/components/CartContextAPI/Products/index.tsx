@@ -1,19 +1,17 @@
-import { useContext } from "react";
-import { CartContext } from "../../../contexts/cartContext";
+import { useCart } from "../../../contexts/cartContext";
+import { Title } from "../../Title";
+import { Product } from "../../Product";
 
 export const Products = () => {
-  const { addToCart, availableProducts } = useContext(CartContext);
+  const { availableProducts } = useCart();
 
   return (
     <div>
-      <h1>Produtos Disponíveis:</h1>
+      <Title text="Produtos Disponíveis:" />
       <ul>
-        {availableProducts.map((product) => (
-          <li>
-            {product.nome}
-            <button onClick={() => addToCart(product)}>Adicionar</button>
-          </li>
-        ))}
+        {/* {availableProducts.map((product) => (
+          <Product product={product} key={product.id} />
+        ))} */}
       </ul>
     </div>
   );
